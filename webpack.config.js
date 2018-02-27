@@ -43,6 +43,7 @@ module.exports = {
     loader: "file-loader?name=/public/icons/[name].[ext]"
 }
 
+
   ]
 }
 };
