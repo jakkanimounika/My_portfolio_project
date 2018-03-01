@@ -1,0 +1,29 @@
+// Navbar
+.navbar {
+padding: 1.25rem 1rem;
+background: #6c757d;
+font-weight: 500;
+font-family: Montserrat;
+transition: all 200ms ease-in;
+}
+ .navbar li a:hover{
+ color:$bg-white;
+
+ }
+
+.navbar-brand{
+font-weight:bold;
+color: $bg-white;
+// font-family: 'Pacifico', cursive;
+font-family: 'Coiny', cursive;
+}
+.navbar-brand:hover{
+  color: $bg-white;
+}
+.navbar-collapse a{
+  color:#dae0e5;
+}
+.navbar li{
+  text-transform: uppercase;
+  padding: 10px;
+}

@@ -1,0 +1,125 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: #6f6f6f;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  background-color: #fff;
+  font-family: $body-font;
+  // background: linear-gradient(black, white);
+}
+
+// Social media
+// .social-media a{
+//   padding: 10px;
+//   color: $bg-white;
+//   transition: all 200ms ease-in;
+// }
+// .social-media a:hover {
+//     color: #673ab7 !important;
+//     text-decoration: none;
+// }
+
+// First slide
+.first-slide {
+    position: relative;
+    height:100vh;
+    background: #f8f9fa;
+}
+
+//Second slide
+.second-slide{
+  margin-top: 5.5rem;
+}
+
+/*=================Headings=================*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $primary-font;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+  color: $dark;
+}
+
+h1 {
+  font-size: 2.0rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+// Button
+.btn{
+  border-radius: 50px;
+}
+
+//btn Theme
+.btn-theme{
+  color:$white;
+  background: $skincolor;
+  border-color: $skincolor;
+  text-transform: uppercase;
+   &:hover {
+     background: transparent;
+     border:3px solid $skincolor;
+     color: $skincolor;
+
+   }
+}
+// btn outline Theme
+.btn-outline-theme {
+  color:$skincolor;
+  border: 3px solid $skincolor;
+    text-transform: uppercase;
+  &:hover {
+    background: $skincolor;
+    color: #fff;
+  }
+}
+
+.btn-lg {
+    padding: 0rem 2.4375rem;
+    line-height: 3.375rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.image1{
+  // box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  // border: 10px 0 0 10px solid $skincolor;
+  border-style: solid;
+    border-width: 35px 0 0 35px;
+    border-color: $skincolor;
+}
+//about image
+// .image1{
+//   border: 1px solid;
+//   padding:5px;
+//   box-shadow: 15px 0 15px 15px $skincolor;
+// }

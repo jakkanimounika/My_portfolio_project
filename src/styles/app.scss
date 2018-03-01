@@ -1,55 +1,6 @@
 @import 'variables';
+@import 'base';
+@import 'navbar';
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i");
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  color: #6f6f6f;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.875rem;
-  background-color: #fff;
-  font-family: "Open Sans", sans-serif;
-}
-
-// Social media
-.social-media a{
-  padding: 10px;
-  color: $txt-colr;
-  transition: all 200ms ease-in;
-}
-.social-media a:hover {
-    color: #673ab7 !important;
-    text-decoration: none;
-}
-
-// Navbar
-.navbar {
-padding: 1.25rem 1rem;
-background: #6c757d;
-font-weight: 500;
-font-family: Montserrat;
-// transition: all 200ms ease-in;
-}
- .navbar li a:hover{
- color:$txt-colr;
-
- }
-
-.navbar-brand{
-font-weight:bold;
-color: $txt-colr;
-}
-.navbar-brand:hover{
-  color: $txt-colr;
-}
-
-
-.navbar-collapse a{
-  color:#dae0e5;
-}
-.navbar li{
-  text-transform: uppercase;
-  padding: 10px;
-}
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Coiny');

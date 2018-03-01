@@ -1,1 +1,24 @@
-$txt-colr: #fff;
+
+$base-line-height: 1.875rem; //Body line height
+$skincolor: #673ab7 !important; //Them$light-graye default color code, paste your own code here
+
+/*=========Background Color============*/
+$bg-white: #fff; //White bg color
+$bg-gray: #f8f8f8; //Light bg color
+$bg-dark: #070707 !important; //Black bg color
+$bg-black: #000000; //Dark bg color
+$border-light: #ededed;
+
+/*=========Text Color============*/
+$white: #fff; //White color
+$gray: #6f6f6f; //Gray color
+$dark: #232323; //Dark color
+$ruby: #ee0979; //Ruby color
+$yellow: #f9ed32; //Dark text color
+$light-gray: #8e8e8e; //Light gray text color
+$primary-light: #b799ec; //Theme default color light
+
+/*=========Font Family============*/
+$body-font: 'Open Sans', sans-serif; //Default body font family
+$primary-font: 'Montserrat', sans-serif; //Primary font family
+$secondary-font: 'Playfair Display', serif; //Secondary font family
