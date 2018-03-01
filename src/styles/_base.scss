@@ -8,7 +8,6 @@ body {
   line-height: 1.875rem;
   background-color: #fff;
   font-family: $body-font;
-  // background: linear-gradient(black, white);
 }
 
 // Social media
@@ -27,11 +26,12 @@ body {
     position: relative;
     height:100vh;
     background: #f8f9fa;
+    margin-top: 130px;
 }
 
 //Second slide
 .second-slide{
-  margin-top: 5.5rem;
+  margin-top: 30px;
 }
 
 /*=================Headings=================*/
@@ -73,7 +73,7 @@ h6 {
   font-weight: 500;
 }
 
-// Button
+/*=================Buttons=================*/
 .btn{
   border-radius: 50px;
 }
@@ -109,17 +109,3 @@ h6 {
     font-weight: 700;
     letter-spacing: 1px;
 }
-
-.image1{
-  // box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);
-  // border: 10px 0 0 10px solid $skincolor;
-  border-style: solid;
-    border-width: 35px 0 0 35px;
-    border-color: $skincolor;
-}
-//about image
-// .image1{
-//   border: 1px solid;
-//   padding:5px;
-//   box-shadow: 15px 0 15px 15px $skincolor;
-// }
