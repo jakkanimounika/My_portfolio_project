@@ -42,6 +42,21 @@
     border-top-width: 1px;
 }
 
+.list-style-1 li {
+    position: relative;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
+
+.list-style-1 li:before{
+  content: "\2714\0020";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 10px;
+
+}
+
 /*=================Headings=================*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
