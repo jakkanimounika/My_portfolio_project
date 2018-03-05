@@ -22,6 +22,25 @@
 .second-slide{
   margin-top: 30px;
 }
+.second-slide .heading-v1::after{
+  border-color: $skincolor;
+}
+
+//Third slide
+.third-slide{
+  margin-top: 40px;
+  padding: 60px 0;
+}
+
+.heading-v1:after{
+  content: "";
+    display: inline-block;
+    border-top-style: solid;
+    border-color: $white;
+    margin-top: 1.07143rem;
+    width: 5rem;
+    border-top-width: 1px;
+}
 
 /*=================Headings=================*/
 h1, h2, h3, h4, h5, h6 {
