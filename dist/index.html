@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
   <title>Mounika - Personal vCard / Resume Template</title>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 </head>
-<body>
+<body class="transparent-header" data-spy="scroll" data-offset="75" data-target="#navbarCollapse">
 
   <!-- Navbar Section -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
@@ -39,11 +41,13 @@
               </div>
           </nav><!--End-->
 
+
+
       <!--Home -->
-        <div class="first-slide " id="home " >
+        <div class="first-slide animated fadeInUp" id="home" >
             <div class="container">
                 <div class="row col-md col-lg text-center">
-                    <div class="text-wrap  animated SlideInUp" >
+                    <div class="text-wrap ">
                         <h4 class="font-weight-normal small-text">Hello, My Name Is</h4>
                         <h1 class="display-1 font-weight-bold  mb-4">Mounika Jakkani</h1>
                         <h2 class="font-weight-normal mb-4">Front End Web Developer.</h2>
@@ -57,14 +61,14 @@
 
   <!-- About -->
        <div class="second-slide heading-v1" id="about">
-          <div class="container overlay-text">
+          <div class="container overlay-text animated fadeInUp">
             <div class="row">
               <div class="col-lg-6 col-xs-6">
                 <img src="images/mouna.jpg" class="img-fluid image1 mb-6" />
                 <!-- The .img-fluid class makes the image scale -->
               </div>
               <div class="col-lg-6 col-xs-6 mb-5 mb-lg-0 light-gray ml-auto align-self-center">
-                        <div class="heading-v1 brd-primary">
+                        <div class="heading-v1 brd-primary ">
                             <h2 class="text-uppercase">About Me</h2>
                         </div>
                         <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
@@ -139,14 +143,77 @@
                              <li>Javascript/JQuery</li>
                              <li>React JS</li>
                            </ul>
-
                         </div>
              </div>
          </div>
        </div>
+     </div>
+     <!--End-->
 
+     <!--Services-->
+      <section id ="servies" class="fourth-slide" style="background-image: url(images/service-bg.jpg); background-repeat:no-repeat; background-position:center; background-attachment:fixed;">
+        <div class="container">
+          <div class="row justify-content-center mb-5 animated fadeInUp">
+            <div class="col-8 justify-content-center text-center">
+              <div class="heading-v1 mb-4">
+                <h2 class="text-white">What I Do</h2>
+              </div>
+            </div>
+          </div>
+
+            <div class="row light-gray mb-5">
+               <div class=" col-lg-4 text-center animated fadeInUp">
+                 <i class="fa fa-diamond fa-2x mb-4" aria-hidden="true"></i>
+                 <h5 class="text-white mb-4">User Experience</h5>
+                 <p>
+                   Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                 </p>
+               </div>
+               <div class=" col-lg-4 text-center animated fadeInUp">
+                 <i class="fa fa-television fa-2x mb-4" aria-hidden="true"></i>
+                 <h5 class="text-white mb-4">Web Design</h5>
+                 <p>
+                   Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                 </p>
+               </div>
+               <div class=" col-lg-4 text-center animated fadeInUp">
+                 <i class="fa fa-rocket fa-2x mb-4" aria-hidden="true"></i>
+                   <h5 class="text-white mb-4">Graphic Design</h5>
+                   <p>
+                     Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                   </p>
+               </div>
+            </div>
+            <div class="row">
+              <div class=" col-lg-4 text-center animated fadeInUp">
+                <i class="fa fa-mobile fa-2x mb-4" aria-hidden="true"></i>
+                    <h5 class="text-white mb-4">App Development</h5>
+                    <p>
+                      Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                    </p>
+              </div>
+              <div class=" col-lg-4 text-center animated fadeInUp">
+                <i class="fa fa-camera fa-2x mb-4" aria-hidden="true"></i>
+                <h5 class="text-white mb-4">Photography</h5>
+                <p>
+                  Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                </p>
+              </div>
+              <div class=" col-lg-4 text-center animated fadeInUp">
+                <i class="fa fa-rocket fa-2x mb-4" aria-hidden="true"></i>
+                <h5 class="text-white mb-4">Branding</h5>
+                <p>
+                  Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan.
+                </p>
+              </div>
+            </div>
+        </div>
+
+      </section>
 
 <!-- <script src="navbar-fixed.js"></script> -->
+
 <script src="bundle.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
 </body>
 </html>
