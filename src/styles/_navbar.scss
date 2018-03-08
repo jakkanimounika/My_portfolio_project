@@ -5,19 +5,20 @@ background: #6c757d;
 font-weight: 500;
 font-family: $primary-font;
 // transition: all 200ms ease-in;
+// margin-bottom: 50px;
 }
 
  .navbar li a:hover{
  color:$bg-white;
-
+//
  }
 
- .sticky-top {
+ .navbar-fixed-top{
  position: fixed;
  z-index: 999;
  width: 100%;
  top: 0;
-
+//
 }
 
 .navbar-brand{

@@ -1,13 +1,18 @@
 // Social media
-// .social-media a{
-//   padding: 10px;
-//   color: $bg-white;
-//   transition: all 200ms ease-in;
-// }
-// .social-media a:hover {
-//     color: #673ab7 !important;
-//     text-decoration: none;
-// }
+
+.social-media i{
+  padding: 15px;
+  color: $white;
+  transition: all 200ms ease-in;
+}
+.social-media a:hover {
+    color: #673ab7 !important;
+    text-decoration: none;
+}
+
+.overlay-text {
+    z-index: 1;
+}
 
 // First slide
 .first-slide {
@@ -15,7 +20,6 @@
     height:100vh;
     background: #f8f9fa;
     margin-top:150px;
-
 }
 
 //Second slide
@@ -37,7 +41,7 @@
   content: "";
     display: inline-block;
     border-top-style: solid;
-    border-color: $white;
+    border-color: inherit;
     margin-top: 1.07143rem;
     width: 5rem;
     border-top-width: 1px;
@@ -63,6 +67,19 @@
   padding-top: 80px;
   padding-bottom: 100px;
   margin-bottom: 100px;
+}
+
+// fifth slide
+.fifth-slide{
+  margin-bottom: 100px;
+}
+
+//sixth -slide
+
+.sixth-slide{
+  background: $skincolor;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 /*=================Headings=================*/
 h1, h2, h3, h4, h5, h6 {
@@ -152,6 +169,63 @@ h6 {
 }
 
 /*=============fontawesome==================*/
-.fa{
+.gallery{
   color:$skincolor;
+}
+
+/*==========border colors============*/
+
+.skincolor{
+ border-color: $skincolor;
+}
+
+// chevron up
+
+#return-to-top{
+  cursor: pointer;
+  background: $ruby;
+  bottom: 40px;
+  right:40px;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px 0px;
+  display: block;
+  display: none;
+  -webkit-transition: all 0.50s linear;
+    -moz-transition: all 0.50s ease;
+    -ms-transition: all 0.50s ease;
+    -o-transition: all 0.50s ease;
+    transition: all 0.50s ease;
+    -webkit-box-shadow: 5px 5px 22px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 22px -4px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 22px -4px rgba(0,0,0,0.75);
+  &:hover {
+    border-radius: 0px 20px;
+  }
+}
+
+// #return-to-top i {
+//     color: $white;
+//     margin: 0;
+//     font-size: 19px;
+//     -webkit-transition: all 0.3s ease;
+//     -moz-transition: all 0.3s ease;
+//     -ms-transition: all 0.3s ease;
+//     -o-transition: all 0.3s ease;
+//     transition: all 0.3s ease;
+// }
+
+//quotes
+#get-quote{
+margin-bottom: 100px;
+padding: 20px;
+font-size: 40px;
+}
+
+.author{
+  color:#ee0979;;
 }

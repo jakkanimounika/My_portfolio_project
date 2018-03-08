@@ -11007,6 +11007,58 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import 'bootstrap';
 
 
+__WEBPACK_IMPORTED_MODULE_5_jquery___default()(document).ready(function () {
+  randomQuote();
+  function randomQuote() {
+    __WEBPACK_IMPORTED_MODULE_5_jquery___default.a.ajax({
+      url: 'https://api.forismatic.com/api/1.0/json?method=getQuote&lang=en&format=json',
+      dataType: 'json',
+      data: {
+        method: "getQuote",
+        lang: "en",
+        format: "json"
+      },
+      success: function (response) {
+        __WEBPACK_IMPORTED_MODULE_5_jquery___default()('#get-quote').html(response.quoteText + '<br>' + '<div class="author">' + '-' + response.quoteAuthor + "</div>");
+      }
+    });
+  }
+  __WEBPACK_IMPORTED_MODULE_5_jquery___default()('#quote-button').click(function () {
+    randomQuote();
+  });
+});
+
+// function randomQuote() {
+//   $.ajax({
+//       url: "https://api.forismatic.com/api/1.0/?",
+//       dataType: "jsonp",
+//       data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
+//       success: function( response ) {
+//         $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
+//           response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
+//         $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
+//           ' (' + response.quoteAuthor + ')');
+//       }
+//   });
+// }
+//
+// $(function() {
+//   randomQuote();
+// });
+//
+// $("button").click(function(){
+//   randomQuote();
+// });
+
+//   $(window).scroll(function() {
+//
+//     if ($(this).scrollTop()===$('#abut'))
+//      {
+//         $('#return-to-top').show();
+//      }
+//
+//  });
+
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -13805,7 +13857,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Gre
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Rye);", ""]);
 
 // module
-exports.push([module.i, "/*=========Background Color============*/\n/*=========Text Color============*/\n/*=========Font Family============*/\n.first-slide {\n  position: relative;\n  height: 100vh;\n  background: #f8f9fa;\n  margin-top: 150px; }\n\n.second-slide {\n  margin-top: 30px; }\n\n.second-slide .heading-v1::after {\n  border-color: #673ab7 !important; }\n\n.third-slide {\n  margin-top: 40px;\n  padding: 60px 0;\n  margin-bottom: 100px; }\n\n.heading-v1:after {\n  content: \"\";\n  display: inline-block;\n  border-top-style: solid;\n  border-color: #fff;\n  margin-top: 1.07143rem;\n  width: 5rem;\n  border-top-width: 1px; }\n\n.list-style-1 li {\n  position: relative;\n  padding-bottom: 10px;\n  padding-left: 25px; }\n\n.list-style-1 li:before {\n  content: \"\\2714   \";\n  position: absolute;\n  top: 0;\n  left: 0;\n  padding-bottom: 10px; }\n\n.fourth-slide {\n  padding-top: 80px;\n  padding-bottom: 100px;\n  margin-bottom: 100px; }\n\n/*=================Headings=================*/\nh1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  font-family: \"Montserrat\", sans-serif;\n  margin-bottom: .5rem;\n  line-height: 1.5;\n  color: #232323; }\n\nh1 {\n  font-family: \"Tangerine\", cursive;\n  font-size: 2.0rem;\n  font-weight: 600; }\n\nh2 {\n  font-size: 2rem;\n  font-weight: 600; }\n\nh3 {\n  font-size: 1.75rem;\n  font-weight: 700; }\n\nh4 {\n  font-size: 1.5rem;\n  font-weight: 700; }\n\nh5 {\n  font-size: 1.25rem;\n  font-weight: 500; }\n\nh6 {\n  font-size: 1rem;\n  font-weight: 500; }\n\n/*=================Buttons=================*/\n.btn {\n  border-radius: 50px;\n  border: 3px solid white;\n  text-transform: uppercase; }\n  .btn:focus {\n    box-shadow: 0 0 0 0px; }\n\n.btn-theme {\n  color: #fff;\n  background: #673ab7 !important;\n  border-color: #673ab7 !important; }\n\n.btn-theme :hover {\n  background: #f8f9fa;\n  border: 3px solid #673ab7 !important; }\n\n.btn-outline-theme {\n  color: #673ab7 !important;\n  border: 3px solid #673ab7 !important;\n  background: transparent; }\n  .btn-outline-theme:hover {\n    background: #673ab7 !important;\n    border-color: #673ab7 !important;\n    color: #fff; }\n\n.btn-lg {\n  padding: 0rem 2.4375rem;\n  line-height: 3.375rem;\n  font-size: 0.875rem;\n  font-weight: 700;\n  letter-spacing: 1px; }\n\n.button-group {\n  padding: 5px; }\n\n/*=============fontawesome==================*/\n.fa {\n  color: #673ab7 !important; }\n\n.navbar {\n  background: #6c757d;\n  font-weight: 500;\n  font-family: \"Montserrat\", sans-serif; }\n\n.navbar li a:hover {\n  color: #fff; }\n\n.sticky-top {\n  position: fixed;\n  z-index: 999;\n  width: 100%;\n  top: 0; }\n\n.navbar-brand {\n  font-size: 50px;\n  font-family: 'Rye', cursive; }\n\n.navbar-collapse a {\n  color: #dae0e5; }\n\n.navbar li {\n  text-transform: uppercase;\n  padding: 10px; }\n\n@media (max-width: 732px) {\n  .first-slide {\n    margin-top: 70px; } }\n\n@media (min-width: 414pz) and (max-width: 736px) {\n  .first-slide {\n    margin-top: 100px; } }\n\nbody {\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  color: #6f6f6f;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.875rem;\n  background-color: #f8f9fa;\n  font-family: \"Open Sans\", sans-serif; }\n", ""]);
+exports.push([module.i, "/*=========Background Color============*/\n/*=========Text Color============*/\n/*=========Font Family============*/\n.social-media i {\n  padding: 15px;\n  color: #fff;\n  transition: all 200ms ease-in; }\n\n.social-media a:hover {\n  color: #673ab7 !important;\n  text-decoration: none; }\n\n.overlay-text {\n  z-index: 1; }\n\n.first-slide {\n  position: relative;\n  height: 100vh;\n  background: #f8f9fa;\n  margin-top: 150px; }\n\n.second-slide {\n  margin-top: 30px; }\n\n.second-slide .heading-v1::after {\n  border-color: #673ab7 !important; }\n\n.third-slide {\n  margin-top: 40px;\n  padding: 60px 0;\n  margin-bottom: 100px; }\n\n.heading-v1:after {\n  content: \"\";\n  display: inline-block;\n  border-top-style: solid;\n  border-color: inherit;\n  margin-top: 1.07143rem;\n  width: 5rem;\n  border-top-width: 1px; }\n\n.list-style-1 li {\n  position: relative;\n  padding-bottom: 10px;\n  padding-left: 25px; }\n\n.list-style-1 li:before {\n  content: \"\\2714   \";\n  position: absolute;\n  top: 0;\n  left: 0;\n  padding-bottom: 10px; }\n\n.fourth-slide {\n  padding-top: 80px;\n  padding-bottom: 100px;\n  margin-bottom: 100px; }\n\n.fifth-slide {\n  margin-bottom: 100px; }\n\n.sixth-slide {\n  background: #673ab7 !important;\n  padding-top: 100px;\n  padding-bottom: 100px; }\n\n/*=================Headings=================*/\nh1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  font-family: \"Montserrat\", sans-serif;\n  margin-bottom: .5rem;\n  line-height: 1.5;\n  color: #232323; }\n\nh1 {\n  font-family: \"Tangerine\", cursive;\n  font-size: 2.0rem;\n  font-weight: 600; }\n\nh2 {\n  font-size: 2rem;\n  font-weight: 600; }\n\nh3 {\n  font-size: 1.75rem;\n  font-weight: 700; }\n\nh4 {\n  font-size: 1.5rem;\n  font-weight: 700; }\n\nh5 {\n  font-size: 1.25rem;\n  font-weight: 500; }\n\nh6 {\n  font-size: 1rem;\n  font-weight: 500; }\n\n/*=================Buttons=================*/\n.btn {\n  border-radius: 50px;\n  border: 3px solid white;\n  text-transform: uppercase; }\n  .btn:focus {\n    box-shadow: 0 0 0 0px; }\n\n.btn-theme {\n  color: #fff;\n  background: #673ab7 !important;\n  border-color: #673ab7 !important; }\n\n.btn-theme :hover {\n  background: #f8f9fa;\n  border: 3px solid #673ab7 !important; }\n\n.btn-outline-theme {\n  color: #673ab7 !important;\n  border: 3px solid #673ab7 !important;\n  background: transparent; }\n  .btn-outline-theme:hover {\n    background: #673ab7 !important;\n    border-color: #673ab7 !important;\n    color: #fff; }\n\n.btn-lg {\n  padding: 0rem 2.4375rem;\n  line-height: 3.375rem;\n  font-size: 0.875rem;\n  font-weight: 700;\n  letter-spacing: 1px; }\n\n.button-group {\n  padding: 5px; }\n\n/*=============fontawesome==================*/\n.gallery {\n  color: #673ab7 !important; }\n\n/*==========border colors============*/\n.skincolor {\n  border-color: #673ab7 !important; }\n\n#return-to-top {\n  cursor: pointer;\n  background: #ee0979;\n  bottom: 40px;\n  right: 40px;\n  position: fixed;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  text-decoration: none;\n  border-radius: 20px 0px;\n  display: block;\n  display: none;\n  -webkit-transition: all 0.50s linear;\n  -moz-transition: all 0.50s ease;\n  -ms-transition: all 0.50s ease;\n  -o-transition: all 0.50s ease;\n  transition: all 0.50s ease;\n  -webkit-box-shadow: 5px 5px 22px -4px rgba(0, 0, 0, 0.75);\n  -moz-box-shadow: 5px 5px 22px -4px rgba(0, 0, 0, 0.75);\n  box-shadow: 5px 5px 22px -4px rgba(0, 0, 0, 0.75); }\n  #return-to-top:hover {\n    border-radius: 0px 20px; }\n\n#get-quote {\n  margin-bottom: 100px;\n  padding: 20px;\n  font-size: 40px; }\n\n.author {\n  color: #ee0979; }\n\n.navbar {\n  background: #6c757d;\n  font-weight: 500;\n  font-family: \"Montserrat\", sans-serif; }\n\n.navbar li a:hover {\n  color: #fff; }\n\n.navbar-fixed-top {\n  position: fixed;\n  z-index: 999;\n  width: 100%;\n  top: 0; }\n\n.navbar-brand {\n  font-size: 50px;\n  font-family: 'Rye', cursive; }\n\n.navbar-collapse a {\n  color: #dae0e5; }\n\n.navbar li {\n  text-transform: uppercase;\n  padding: 10px; }\n\n@media (max-width: 732px) {\n  .first-slide {\n    margin-top: 70px; } }\n\n@media (min-width: 414pz) and (max-width: 736px) {\n  .first-slide {\n    margin-top: 100px; } }\n\nbody {\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  color: #6f6f6f;\n  font-weight: 400;\n  font-size: 1rem;\n  line-height: 1.875rem;\n  background-color: #f8f9fa;\n  font-family: \"Open Sans\", sans-serif; }\n", ""]);
 
 // exports
 
