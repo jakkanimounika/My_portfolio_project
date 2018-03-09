@@ -14,57 +14,24 @@ import 'google-fonts';
 // import 'bootstrap';
 import 'lightgallery/dist/css/lightgallery.css';
 
+// $('body').scrollspy({ target: '#services' });
+$('#myScrollspy').on('activate.bs.scrollspy', function () {
+  if (active.parent('.dropdown-menu').length)  {
+      active = active
+        .closest('li.dropdown')
+        .addClass('active')
+    }
+});
 
-$(document).ready(function(){
+
+function randomQuote() {
+  $.get( "/getQuote", function( data ) {
+    //console.log(data);
+    $('#get-quote').html('"'+data+'"');
+  });
+}
+randomQuote();
+
+$("#quote-button").click(function(){
   randomQuote();
-  function randomQuote(){
-    $.ajax({
-       url: 'https://api.forismatic.com/api/1.0/json?method=getQuote&lang=en&format=json',
-       dataType: 'json',
-       data: {
-        method: "getQuote",
-        lang: "en",
-        format: "json"
-      },
-       success: function(response){
-        $('#get-quote').html( response.quoteText + '<br>'+ '<div class="author">'+'-' + response.quoteAuthor + "</div>");
-
-       }
-    });
-  }
-  $('#quote-button').click(function() {
-    randomQuote();
 });
-
-});
-
-// function randomQuote() {
-//   $.ajax({
-//       url: "https://api.forismatic.com/api/1.0/?",
-//       dataType: "jsonp",
-//       data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
-//       success: function( response ) {
-//         $("#random_quote").html("<p id='random_quote' class='lead text-center'>" +
-//           response.quoteText + "<br/>&dash; " + response.quoteAuthor + " &dash;</p>");
-//         $("#tweet").attr("href", "https://twitter.com/home/?status=" + response.quoteText +
-//           ' (' + response.quoteAuthor + ')');
-//       }
-//   });
-// }
-//
-// $(function() {
-//   randomQuote();
-// });
-//
-// $("button").click(function(){
-//   randomQuote();
-// });
-
-//   $(window).scroll(function() {
-//
-//     if ($(this).scrollTop()===$('#abut'))
-//      {
-//         $('#return-to-top').show();
-//      }
-//
-//  });

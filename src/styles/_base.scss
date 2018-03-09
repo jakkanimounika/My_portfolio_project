@@ -1,5 +1,6 @@
-// Social media
+.anchor { padding-top: 120px; }
 
+// Social media
 .social-media i{
   padding: 15px;
   color: $white;
@@ -9,7 +10,16 @@
     color: #673ab7 !important;
     text-decoration: none;
 }
+/*===============Projects menu=================*/
+.dropdown-menu-right{
+  color: $dark;
+  background-color: $bg-dark;
+}
+.dropdown-item:hover {
+  background: $bg-dark;
+}
 
+//overlay-text
 .overlay-text {
     z-index: 1;
 }
@@ -19,12 +29,13 @@
     position: relative;
     height:100vh;
     background: #f8f9fa;
-    margin-top:150px;
+    margin-top:90px;
+    margin-bottom: 40px;
 }
 
 //Second slide
 .second-slide{
-  margin-top: 30px;
+    padding-top: 100px;
 }
 .second-slide .heading-v1::after{
   border-color: $skincolor;
@@ -32,9 +43,10 @@
 
 //Third slide
 .third-slide{
-  margin-top: 40px;
+  margin-top: 100px;
   padding: 60px 0;
   margin-bottom: 100px;
+  padding-top: 90px;
 }
 
 .heading-v1:after{
@@ -64,7 +76,7 @@
 
 //forth-slide
 .fourth-slide{
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 100px;
   margin-bottom: 100px;
 }
@@ -72,15 +84,16 @@
 // fifth slide
 .fifth-slide{
   margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 //sixth -slide
-
 .sixth-slide{
   background: $skincolor;
   padding-top: 100px;
   padding-bottom: 100px;
 }
+
 /*=================Headings=================*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -131,7 +144,6 @@ h6 {
   }
 }
 
-//btn Theme
 .btn-theme{
   color:$white;
   background: $skincolor;
@@ -140,11 +152,8 @@ h6 {
   .btn-theme :hover {
      background: #f8f9fa;
      border:3px solid $skincolor;
+}
 
-   }
-
-
-// btn outline Theme
 .btn-outline-theme {
   color:$skincolor;
   border: 3px solid $skincolor;
@@ -155,7 +164,6 @@ h6 {
     color: $white;
   }
 }
-
 .btn-lg {
     padding: 0rem 2.4375rem;
     line-height: 3.375rem;
@@ -163,7 +171,6 @@ h6 {
     font-weight: 700;
     letter-spacing: 1px;
 }
-
 .button-group{
   padding:5px;
 }
@@ -173,14 +180,16 @@ h6 {
   color:$skincolor;
 }
 
-/*==========border colors============*/
+/*==========Border Colors============*/
 
 .skincolor{
  border-color: $skincolor;
 }
+.brd-white{
+  border: $white;
+}
 
-// chevron up
-
+/*==========Chevron Up============*/
 #return-to-top{
   cursor: pointer;
   background: $ruby;
@@ -219,13 +228,13 @@ h6 {
 //     transition: all 0.3s ease;
 // }
 
-//quotes
+/*==========Quotes============*/
 #get-quote{
+  margin: 0 40px;
 margin-bottom: 100px;
 padding: 20px;
-font-size: 40px;
-}
-
-.author{
-  color:#ee0979;;
+font-size: 20px;
+border: 2px solid $skincolor;
+box-shadow: 5px 10px #888888;
+font-family: $body-font;
 }

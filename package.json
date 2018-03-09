@@ -9,7 +9,9 @@
   },
   "author": "Mounika Jakkani",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.4"
+  },
   "devDependencies": {
     "animate.css": "^3.6.1",
     "babel-core": "^6.26.0",
