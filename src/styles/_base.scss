@@ -182,8 +182,9 @@ h6 {
 
 /*==========Border Colors============*/
 
-.skincolor{
+.brd-primary{
  border-color: $skincolor;
+
 }
 .brd-white{
   border: $white;
@@ -237,4 +238,15 @@ font-size: 20px;
 border: 2px solid $skincolor;
 box-shadow: 5px 10px #888888;
 font-family: $body-font;
+}
+
+/*==========contact============*/
+#contact-form{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  background-color: transparent;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid $border-light;
 }
