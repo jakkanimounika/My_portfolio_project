@@ -6,8 +6,42 @@
 
 @media(min-width:414px)and(max-width: 736px){
   .first-slide{
-  margin-top: 10px;
+  margin-top: 30px;
   // margin-bottom:200px;
+  .anchor {
+     padding-top: 40px;
+   }
+
+
+  }
 }
 
+@media(min-width:412px)and(max-width: 732px){
+  .first-slide{
+  margin-top: 0px;
+  // margin-bottom:200px;
+  .anchor {
+     padding-top: 40px;
+   }
 }
+}
+
+@media(min-width:320px)and(max-width: 568px){
+  .first-slide{
+  margin-top: 0;
+
+  .anchor {
+     padding-top: 0;
+ }
+  }
+}
+
+// @media(min-width:375px)and(max-width: 667px){
+//   .first-slide{
+//   margin-top: 10px;
+//
+//   .anchor {
+//      padding-top: 15px;
+//    }
+// }
+// }
