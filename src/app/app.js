@@ -35,3 +35,57 @@ randomQuote();
 $("#quote-button").click(function(){
   randomQuote();
 });
+
+
+
+$("#generate-form").click(function(){
+  var jstr =$("#json-string textarea").val();
+  var jobj =JSON.parse(jstr);
+  $("#json-form").empty("");
+
+  for(let i=0; i<jobj.length; i++) {
+    if(jobj[i].type == "input") {
+      addInputField(jobj[i]);
+    }
+  }
+
+
+});
+
+function addInputField(fldobj) {
+  var form_str= `
+        <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">${fldobj.name}</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="staticEmail" value="">
+            </div>
+          </div>
+          `;
+
+  $("#json-form").append(form_str);
+}
+
+$("#json-string").hide();
+
+$(".project").click(function(){
+   $("#main").hide();
+   $("#json-string").show();
+});
+
+
+$(".nav-link").click(function() {
+  if($("#main").is(':hidden')) {
+    $("#json-string").hide();
+    $("#main").show();
+  }
+
+});
+
+
+$(".project").click(function(){
+  $(".form-submit-button").hide();
+});
+
+$("#generate-form").click(function(){
+   $(".form-submit-button").fadeIn();
+});
