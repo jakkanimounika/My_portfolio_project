@@ -47,6 +47,10 @@ $("#generate-form").click(function(){
     if(jobj[i].type == "input") {
       addInputField(jobj[i]);
     }
+    // else if (jobj.type == "option") {
+    //   $( "#exampleSelect1 option:selected" ).text();
+    //
+    // }
   }
 
 
@@ -55,21 +59,55 @@ $("#generate-form").click(function(){
 function addInputField(fldobj) {
   var form_str= `
         <div class="form-group row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">${fldobj.name}</label>
+            <label for="staticEmail" class="col-sm-2 col-form-label">${fldobj.name}*</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="staticEmail" value="">
+              <input type="text" class="form2 form-control" id="staticEmail" value="">
             </div>
+
           </div>
           `;
-
-  $("#json-form").append(form_str);
+$("#json-form").append(form_str);
 }
+
+
+$(".form-submit-button").click(function(){
+if($('input:text').is(":empty"))
+{
+  alert("Feilds should not be empty");
+}else {
+  alert("submit successfully");
+}
+});
+
+/*===============Json Form Validation=================*/
+// $(".form-submit-button").click(function(){
+//     var isFormValid = true;
+//
+//     $(".form2 input:text").each(function(){
+//        if ($(this).val().length == 0){
+//          $(this).css({ "border": '#FF0000 1px solid'});
+//                isFormValid = false;
+//             }
+//         else{
+//           $(this).removeClass({"border": '#FF0000 1px solid'});
+//         }
+//       });
+//
+// // if(isFormValid)
+// // alert("successfully submitted");
+// if (!isFormValid) alert("Please fill in all the required fields (indicated by *)");
+//
+//     // return isFormValid;
+// });
+// //End
+
 
 $("#json-string").hide();
 
-$(".project").click(function(){
+$(".project1").click(function(){
    $("#main").hide();
    $("#json-string").show();
+   $("#todo-list").hide();
 });
 
 
@@ -82,10 +120,52 @@ $(".nav-link").click(function() {
 });
 
 
-$(".project").click(function(){
-  $(".form-submit-button").hide();
+$(".project2").click(function(){
+  $("#main").hide();
+  $("#json-string").hide();
+  $("#todo-list").show();
 });
 
 $("#generate-form").click(function(){
    $(".form-submit-button").fadeIn();
 });
+
+// Project 2
+$(".project2").click(function(){
+  $("#main").hide();
+  $("#todo").show();
+});
+
+
+$("#todo-sub").click(function(){
+var output = $("#todo-data input").val();
+$("#todo-list").append(`${output}<br>`);
+$("#todo-data input").val("");
+});
+
+
+
+// var check= {
+//                  "select":[
+//                   {"option" : "Santa clara"},
+//                   {"option" :"Sanjose"},
+//                   // {"Milpitas"},
+//                   // {"Fremont"},
+//                   // {"Newark"}
+//
+//             ]
+//           };
+//
+//           for(var i=0;i<check.select.option.length;i++){
+//           }
+//             // $( "#myselect option:selected" ).text();
+//     var my_out = `<div class="form-group row">
+//     <label for="exampleSelect2 col-lg-2">Example select</label>
+//     <select class="form-control col-lg-10" id="exampleSelect2">
+//        <option>${check.select.option}</option>
+//
+//     </select>
+//   </div>`;
+// $("#debug").append(my_out);
+
+ // console.log(check.select);
