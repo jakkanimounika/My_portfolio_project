@@ -49,6 +49,8 @@ $("#generate-form").click(function(){
     } else if(jobj[i].type == "dropdown") {
       // console.log("coming here 0");
       addInputOptionField(jobj[i]);
+    } else if (jobj[i].type == "radio") {
+      addInputRadioButton(jobj[i]);
     }
 
   }
@@ -73,13 +75,26 @@ function addInputOptionField(fldobj) {
   </div>`;
 $("#json-form").append(form_str);
 }
+function addInputRadioButton(fldobj){
+  var form_str = `<div class="form-check form-check-inline row">
+  <label for="exampleRadio1" class="col-sm-2 col-form-label">${fldobj.name}*</label>`;
+
+for(let i=0;i<fldobj.options.length;i++){
+  form_str += `<div class="col-sm-10">
+  <input class="form-check-input form-check-inline " type="radio">
+  <label class="form-check-label form-check-inline " for="inlineRadio1">${fldobj.options[i]}</label>
+  </div>`;
+}
+form_str += `</div>`;
+$("#json-form").append(form_str);
+}
 
 function addInputField(fldobj) {
   var form_str= `
         <div class="form-group row">
             <label for="staticEmail" class="col-sm-2 col-form-label">${fldobj.name}*</label>
-            <div class="col-sm-10">
-              <input type="text" class="form2 form-control" id="staticEmail" value="">
+            <div class="col-sm-10" id="form2">
+              <input type="text" class="form-control" id="staticEmail" value="">
             </div>
 
           </div>
@@ -87,38 +102,6 @@ function addInputField(fldobj) {
 $("#json-form").append(form_str);
 
 }
-
-
-// $(".form-submit-button").click(function(){
-// if($('input:text').is(":empty"))
-// {
-//   alert("Feilds should not be empty");
-// }else {
-//   alert("submit successfully");
-// }
-// });
-
-/*===============Json Form Validation=================*/
-// $(".form-submit-button").click(function(){
-//     var isFormValid = true;
-//
-//     $(".form2 input:text").each(function(){
-//        if ($(this).val().length == 0){
-//          $(this).css({ "border": '#FF0000 1px solid'});
-//                isFormValid = false;
-//             }
-//         else{
-//           $(this).removeClass({"border": '#FF0000 1px solid'});
-//         }
-//       });
-//
-// // if(isFormValid)
-// // alert("successfully submitted");
-// if (!isFormValid) alert("Please fill in all the required fields (indicated by *)");
-//
-//     // return isFormValid;
-// });
-// //End
 
 
 $("#json-string").hide();
@@ -156,8 +139,33 @@ $("#generate-form").click(function(){
 
 $("#todo-sub").click(function(){
 var output = $("#todo-data input").val();
-$("#todo-out").append(`<ol>
-  ${output}</br>
-  </ol>`);
+$("#todo-out").append(`<ul>
+  <li>${output}</br></li>
+    </ul>`);
 $("#todo-data input").val("");
 });
+
+
+/*===============Json Form Validation=================*/
+// function jsonFormValidation(){
+  $(".form-submit-button").click(function(){
+    var formValid = true;
+     $("#form2 input").each(function(){
+       if($(this).val().length == 0){
+         $(this).css({ "border": '#FF0000 1px solid'});
+
+         formValid = false;
+       }
+       else if ($(this).val().length > 0) {
+         formValid = true;
+       }
+   });
+     if(!formValid){
+       alert("Please fill all the forms indicated by *");
+     }
+     else if (formValid) {
+       alert("form submitted successfully");
+     }
+
+  });
+// }
