@@ -11055,13 +11055,14 @@ function addInputField(fldobj) {
   __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#json-form").append(form_str);
 }
 
-__WEBPACK_IMPORTED_MODULE_5_jquery___default()(".form-submit-button").click(function () {
-  if (__WEBPACK_IMPORTED_MODULE_5_jquery___default()('input:text').is(":empty")) {
-    alert("Feilds should not be empty");
-  } else {
-    alert("submit successfully");
-  }
-});
+// $(".form-submit-button").click(function(){
+// if($('input:text').is(":empty"))
+// {
+//   alert("Feilds should not be empty");
+// }else {
+//   alert("submit successfully");
+// }
+// });
 
 /*===============Json Form Validation=================*/
 // $(".form-submit-button").click(function(){
@@ -11087,6 +11088,8 @@ __WEBPACK_IMPORTED_MODULE_5_jquery___default()(".form-submit-button").click(func
 
 
 __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#json-string").hide();
+__WEBPACK_IMPORTED_MODULE_5_jquery___default()(".form-submit-button").hide();
+__WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo-list").hide();
 
 __WEBPACK_IMPORTED_MODULE_5_jquery___default()(".project1").click(function () {
   __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#main").hide();
@@ -11111,17 +11114,13 @@ __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#generate-form").click(function 
   __WEBPACK_IMPORTED_MODULE_5_jquery___default()(".form-submit-button").fadeIn();
 });
 
-// Project 2
-__WEBPACK_IMPORTED_MODULE_5_jquery___default()(".project2").click(function () {
-  __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#main").hide();
-  __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo").show();
-});
+// $("#todo-sub").click(function(){
+// var output = $("#todo-data input").val();
+// $("#todo-list").append(`${output}<br>`);
+// $("#todo-data input").val("");
+// });
+//
 
-__WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo-sub").click(function () {
-  var output = __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo-data input").val();
-  __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo-list").append(`${output}<br>`);
-  __WEBPACK_IMPORTED_MODULE_5_jquery___default()("#todo-data input").val("");
-});
 
 // var check= {
 //                  "select":[

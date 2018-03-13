@@ -70,14 +70,14 @@ $("#json-form").append(form_str);
 }
 
 
-$(".form-submit-button").click(function(){
-if($('input:text').is(":empty"))
-{
-  alert("Feilds should not be empty");
-}else {
-  alert("submit successfully");
-}
-});
+// $(".form-submit-button").click(function(){
+// if($('input:text').is(":empty"))
+// {
+//   alert("Feilds should not be empty");
+// }else {
+//   alert("submit successfully");
+// }
+// });
 
 /*===============Json Form Validation=================*/
 // $(".form-submit-button").click(function(){
@@ -103,11 +103,14 @@ if($('input:text').is(":empty"))
 
 
 $("#json-string").hide();
+$(".form-submit-button").hide();
+$("#todo-list").hide();
 
 $(".project1").click(function(){
    $("#main").hide();
    $("#json-string").show();
    $("#todo-list").hide();
+
 });
 
 
@@ -130,19 +133,13 @@ $("#generate-form").click(function(){
    $(".form-submit-button").fadeIn();
 });
 
-// Project 2
-$(".project2").click(function(){
-  $("#main").hide();
-  $("#todo").show();
-});
 
-
-$("#todo-sub").click(function(){
-var output = $("#todo-data input").val();
-$("#todo-list").append(`${output}<br>`);
-$("#todo-data input").val("");
-});
-
+// $("#todo-sub").click(function(){
+// var output = $("#todo-data input").val();
+// $("#todo-list").append(`${output}<br>`);
+// $("#todo-data input").val("");
+// });
+//
 
 
 // var check= {
