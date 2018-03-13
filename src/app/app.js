@@ -134,13 +134,12 @@ $("#generate-form").click(function(){
 });
 
 
-// $("#todo-sub").click(function(){
-// var output = $("#todo-data input").val();
-// $("#todo-list").append(`${output}<br>`);
-// $("#todo-data input").val("");
-// });
-//
 
+$("#todo-sub").click(function(){
+var output = $("#todo-data input:text").val();
+$("#todo-out").append(`${output}<br>`);
+$("#todo-data input").val("");
+});
 
 // var check= {
 //                  "select":[
