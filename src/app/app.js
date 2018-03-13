@@ -136,8 +136,10 @@ $("#generate-form").click(function(){
 
 
 $("#todo-sub").click(function(){
-var output = $("#todo-data input:text").val();
-$("#todo-out").append(`${output}<br>`);
+var output = $("#todo-data input").val();
+$("#todo-out").append(`<ol>
+  ${output}</br>
+  </ol>`);
 $("#todo-data input").val("");
 });
 
