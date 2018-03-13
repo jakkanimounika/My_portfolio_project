@@ -14,7 +14,7 @@ import 'google-fonts';
 // import 'bootstrap';
 import 'lightgallery/dist/css/lightgallery.css';
 
-// $('body').scrollspy({ target: '#services' });
+
 $('#myScrollspy').on('activate.bs.scrollspy', function () {
   if (active.parent('.dropdown-menu').length)  {
       active = active
@@ -46,15 +46,33 @@ $("#generate-form").click(function(){
   for(let i=0; i<jobj.length; i++) {
     if(jobj[i].type == "input") {
       addInputField(jobj[i]);
+    } else if(jobj[i].type == "dropdown") {
+      // console.log("coming here 0");
+      addInputOptionField(jobj[i]);
     }
-    // else if (jobj.type == "option") {
-    //   $( "#exampleSelect1 option:selected" ).text();
-    //
-    // }
+
   }
 
 
 });
+
+function addInputOptionField(fldobj) {
+  //fldobj.options = ["CA","NZ"];
+  var form_str = `
+  <div class="form-group row">
+    <label for="exampleSelect1"class="col-sm-2 col-form-label">${fldobj.name}*</label>
+    <div class="col-sm-10">
+    <select class="form-control" id="exampleSelect1">
+    </div>
+  `;
+  for(let i=0; i<fldobj.options.length; i++) {
+    form_str += `<option>${fldobj.options[i]}</option>`;
+  }
+  form_str += `
+    </select>
+  </div>`;
+$("#json-form").append(form_str);
+}
 
 function addInputField(fldobj) {
   var form_str= `
@@ -67,6 +85,7 @@ function addInputField(fldobj) {
           </div>
           `;
 $("#json-form").append(form_str);
+
 }
 
 
@@ -142,28 +161,3 @@ $("#todo-out").append(`<ol>
   </ol>`);
 $("#todo-data input").val("");
 });
-
-// var check= {
-//                  "select":[
-//                   {"option" : "Santa clara"},
-//                   {"option" :"Sanjose"},
-//                   // {"Milpitas"},
-//                   // {"Fremont"},
-//                   // {"Newark"}
-//
-//             ]
-//           };
-//
-//           for(var i=0;i<check.select.option.length;i++){
-//           }
-//             // $( "#myselect option:selected" ).text();
-//     var my_out = `<div class="form-group row">
-//     <label for="exampleSelect2 col-lg-2">Example select</label>
-//     <select class="form-control col-lg-10" id="exampleSelect2">
-//        <option>${check.select.option}</option>
-//
-//     </select>
-//   </div>`;
-// $("#debug").append(my_out);
-
- // console.log(check.select);
