@@ -1,11 +1,22 @@
 
 #todo-out{
   background-color: $skincolor;
+  background: auto;
   color: $white;
   margin-top: 50px;
-  height: auto;
-  min-height: 100%;
+  // height: auto;
+  height: 100%;
   font-family:$cursive-font;
   font-size: 30px;
 
+}
+#todo-data input[type=text] {
+    padding:5px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
 }

@@ -96,8 +96,7 @@ function addInputField(fldobj) {
             <div class="col-sm-10" id="form2">
               <input type="text" class="form-control" id="staticEmail" value="">
             </div>
-
-          </div>
+        </div>
           `;
 $("#json-form").append(form_str);
 
@@ -147,7 +146,7 @@ $("#todo-data input").val("");
 
 
 /*===============Json Form Validation=================*/
-// function jsonFormValidation(){
+
   $(".form-submit-button").click(function(){
     var formValid = true;
      $("#form2 input").each(function(){
@@ -157,6 +156,7 @@ $("#todo-data input").val("");
          formValid = false;
        }
        else if ($(this).val().length > 0) {
+          $(this).css({ "border": '#228B22 1px solid'});
          formValid = true;
        }
    });
@@ -168,4 +168,3 @@ $("#todo-data input").val("");
      }
 
   });
-// }
