@@ -1,5 +1,6 @@
-
-
+var React = require('react');
+var ReactDOM = require('react-dom');
+var {Route, Router, IndexRoute,hashHistory} = require('react-router');
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -7,21 +8,9 @@ import 'jquery/dist/jquery.min.js';
 import '../styles/app.scss';
 import $ from "jquery";
 import 'popper.js/dist/popper.min.js';
-import 'slick-carousel';
 import 'google-fonts';
-// import 'wowjs/dist/wow.min.js';
 // import Popper from "popper.js";
 // import 'bootstrap';
-import 'lightgallery/dist/css/lightgallery.css';
-
-
-$('#myScrollspy').on('activate.bs.scrollspy', function () {
-  if (active.parent('.dropdown-menu').length)  {
-      active = active
-        .closest('li.dropdown')
-        .addClass('active')
-    }
-});
 
 
 function randomQuote() {
@@ -76,17 +65,20 @@ function addInputOptionField(fldobj) {
 $("#json-form").append(form_str);
 }
 function addInputRadioButton(fldobj){
-  var form_str = `<div class="form-check form-check-inline row">
-  <label for="exampleRadio1" class="col-sm-2 col-form-label">${fldobj.name}*</label>`;
-
-for(let i=0;i<fldobj.options.length;i++){
-  form_str += `<div class="col-sm-10">
-  <input class="form-check-input form-check-inline " type="radio">
-  <label class="form-check-label form-check-inline " for="inlineRadio1">${fldobj.options[i]}</label>
+  var form_str = `<div class="form-check row">
+  <div class="col-md-4 pl-0">
+     ${fldobj.name}
   </div>`;
-}
-form_str += `</div>`;
-$("#json-form").append(form_str);
+  for(let i=0;i<fldobj.options.length;i++){
+    form_str += `
+    <div class="col-md-4 ">
+    <input class="form-check-input" type="radio">
+    <label class="form-check-label" for="inlineRadio1">${fldobj.options[i]}</label>
+    </div>`;
+  }
+  form_str += `</div>`;
+  $("#json-form").append(form_str);
+
 }
 
 function addInputField(fldobj) {
@@ -168,3 +160,9 @@ $("#todo-data input").val("");
      }
 
   });
+
+  /*===============React Project=================*/
+
+  var Main = require('../app/containers/Main');
+
+  ReactDOM.render(<Main />, document.getElementById('sec'))
