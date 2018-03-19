@@ -128,15 +128,6 @@ $("#generate-form").click(function(){
 
 
 
-$("#todo-sub").click(function(){
-var output = $("#todo-data input").val();
-$("#todo-out").append(`<ul>
-  <li>${output}</br></li>
-    </ul>`);
-$("#todo-data input").val("");
-});
-
-
 /*===============Json Form Validation=================*/
 
   $(".form-submit-button").click(function(){
@@ -165,4 +156,4 @@ $("#todo-data input").val("");
 
   var Main = require('../app/containers/Main');
 
-  ReactDOM.render(<Main />, document.getElementById('sec'))
+  // ReactDOM.render(<Main />, document.getElementById('sec'))
